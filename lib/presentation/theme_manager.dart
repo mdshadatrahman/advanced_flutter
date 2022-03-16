@@ -39,7 +39,7 @@ ThemeData getApplicationTheme() {
 
     //Button theme
     buttonTheme: ButtonThemeData(
-      shape: StadiumBorder(),
+      shape: const StadiumBorder(),
       disabledColor: ColorManager.grey1,
       buttonColor: ColorManager.primary,
       splashColor: ColorManager.primaryOpacity70,
@@ -58,12 +58,37 @@ ThemeData getApplicationTheme() {
 
     //Text theme
     textTheme: TextTheme(
-      headline1: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
-      subtitle1: getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
+      headline1: getSemiBoldStyle(
+          color: ColorManager.darkGrey, fontSize: FontSize.s16),
+      subtitle1:
+          getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
       caption: getRegularStyle(color: ColorManager.grey1),
       bodyText1: getRegularStyle(color: ColorManager.grey),
     ),
 
     //Input decoration theme (text form field)
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: const EdgeInsets.all(AppPadding.p8),
+      hintStyle: getRegularStyle(color: ColorManager.grey1),
+      labelStyle: getMediumStyle(color: ColorManager.darkGrey),
+      errorStyle: getRegularStyle(color: ColorManager.error),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.grey, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide:
+            BorderSide(color: ColorManager.primary, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.error, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.error, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+      ),
+    ),
   );
 }
