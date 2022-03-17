@@ -1,4 +1,7 @@
+import 'package:advanced_flutter/presentation/resources/assets_manager.dart';
+import 'package:advanced_flutter/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
 
@@ -9,6 +12,13 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: ColorManager.primary,
+      body: const Center(
+        child: Image(
+          image: AssetImage(ImageAssets.splashLogo),
+        ),
+      ),
+    );
   }
 }
