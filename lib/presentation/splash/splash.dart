@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:advanced_flutter/presentation/resources/assets_manager.dart';
 import 'package:advanced_flutter/presentation/resources/color_manager.dart';
 import 'package:advanced_flutter/presentation/resources/routes_manager.dart';
