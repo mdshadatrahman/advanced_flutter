@@ -1,3 +1,4 @@
+import 'package:advanced_flutter/domain/model.dart';
 import 'package:advanced_flutter/presentation/resources/assets_manager.dart';
 import 'package:advanced_flutter/presentation/resources/color_manager.dart';
 import 'package:advanced_flutter/presentation/resources/routes_manager.dart';
@@ -207,11 +208,4 @@ class OnBoardingPage extends StatelessWidget {
       ],
     );
   }
-}
-
-class SliderObject {
-  String title;
-  String subtitle;
-  String image;
-  SliderObject(this.title, this.subtitle, this.image);
 }
